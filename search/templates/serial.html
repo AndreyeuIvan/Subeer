@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% block content %}
+{% if latest_serial_list %}
+    <ul>
+    {% for serial in latest_serial_list %}
+        <li><a href="/{{ serial.id }}/">{{ serial.serial_name }}</a></li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No serials are available.</p>
+{% endif %}
+{% endblock %}

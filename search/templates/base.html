@@ -1,0 +1,21 @@
+{% load bootstrap4 %}
+	<nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+	 <a class="navbar-brand" href="#">
+	 	<h2>Subeer</h2>
+	 </a>				
+	<a class="dropdown-item" href="/{{ serial.name }}">
+		Serial
+	</a>
+	<a class="dropdown-item" href="/{{ season.name }}">
+		Season
+	</a>
+	<a class="dropdown-item" href="/{{ episode.name }}">
+		Episode
+	</a>
+    </ul>
+	</div>
+	</li>
+	</ul>
+	</nav>
+{% block content %}
+{% endblock content%}
