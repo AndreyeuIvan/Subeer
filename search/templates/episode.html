@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% block content %}
+{% if latest_episode_list %}
+    <ul>
+    {% for episode in latest_episode_list %}
+        <li><a href="/{{ episode.id }}/">{{ episode.episode_name }}</a></li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No episodes are available.</p>
+{% endif %}
+{% endblock %}
