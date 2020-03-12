@@ -1,12 +1,10 @@
 {% extends 'base.html' %}
 {% block content %}
-{% if latest_season_list %}
-    <ul>
-    {% for season in latest_season_list %}
-        <li><a href="/{{ season.id }}/">{{ season.season_name }}</a></li>
-    {% endfor %}
-    </ul>
-{% else %}
-    <p>No season are available.</p>
-{% endif %}
+<h1>
+	{% for season in seasons %}
+	<li><a href=" {{ season.id }}/episode/ ">
+	{{ season.season_name }}</a></li>
+	{% endfor %}
+</h1>
+
 {% endblock %}

@@ -20,9 +20,8 @@ from search import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.serial_all, name='serial'),
-    path('season/', views.season_all, name='season'),
-    path('episode/', views.episode_id, name='episode'),
-    path('<int:serial_id>/', views.serial_id, name='serial_id'),
-    path('<int:season_id>/', views.season_id, name='season_id'),
-    path('<int:episode_id>/',views.episode_id, name='epidose_id'),
+    path('<int:serial_id>', views.season, name='season'),
+    path('<int:season_id>/episode/', views.episode, name='episode'),
+    
+    
 ]

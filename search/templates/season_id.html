@@ -1,9 +1,0 @@
-{% extends 'base.html' %}
-{% block content %}
-<h1><a href="/{{ serial.season_name }}">{{ season.season_name }}</h1>
-<ul>
-{% for choice in season.choice_set.all %}
-    <li>{{ choice.choice_text }}</li>
-{% endfor %}
-</ul>
-{% endblock %}
