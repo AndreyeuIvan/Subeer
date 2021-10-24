@@ -19,9 +19,9 @@ from search import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', views.serial_all, name='serial'),
+    path('', views.serial, name='serial'),
     path('<int:serial_id>', views.season, name='season'),
     path('<int:season_id>/episode/', views.episode, name='episode'),
-    
-    
+    path('form/',views.get_name, name='form'),
+    #path('pag/', views.listing, name='pag'),
 ]

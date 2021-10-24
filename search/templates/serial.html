@@ -1,10 +1,16 @@
 {% extends 'base.html' %}
 {% block content %}
-    <ul>
-    {% for serial in serials %}
-        <li>
-        	<a href="{{ serial.id }}">{{ serial.serial_name }}</a>
-        </li>
-    {% endfor %}
-    </ul>
+<div>
+    <form action="{% url 'serial' %}" method="get" class="form-inline bg-light">
+		<input type='text' name='q' class="form-control" type="text" placeholder="Search..." aria-label="Search">
+		<button class="btn btn-outline-success" type="submit">Search</button>
+	</form>
+</div>
+<main role ='main'>
+<div class="jumbotron">
+
+
+
+</div>
+</main>
 {% endblock %}

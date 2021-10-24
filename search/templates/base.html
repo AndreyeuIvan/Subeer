@@ -1,21 +1,31 @@
+{% extends 'bootstrap4.html' %}
+
 {% load bootstrap4 %}
-	<nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-	 <a class="navbar-brand" href=" ">
-	 	<h2>Subeer</h2>
-	 </a>				
-	<a class="dropdown-item" href=" ">
-		Serial
-	</a>
-	<a class="dropdown-item" href=" ">
-		Season
-	</a>
-	<a class="dropdown-item" href=" ">
-		Episode
-	</a>
-    </ul>
-	</div>
-	</li>
-	</ul>
-	</nav>
-{% block content %}
-{% endblock content%}
+
+{% block bootstrap4_title %}
+  {% block title %}{% endblock %} Title Subeer
+{% endblock %}
+
+{% block bootstrap4_content %}
+<nav class='mb-1 navbar navbar-expand-lg navbar-dark secondary-color lighten-1 bg-light' >
+	
+  {% include 'nav.html' %}
+
+</nav>
+
+ 
+
+	{% block content %} {% endblock %}
+
+   
+   
+{% endblock %}
+	
+
+{% block bootstrap4_after_content %}
+  <div id="footer">
+    {% block footer %}
+    &copy; Copyright 2020 by <a href="mailto:andreeviv@icloud.com"> Ivar</a>.
+    {% endblock %}
+  </div>
+{% endblock %}

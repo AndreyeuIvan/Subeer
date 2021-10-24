@@ -1,0 +1,27 @@
+<!-- Navigation bar   url 'episode' episode.season /episode /// url 'season' season.serial_id  -->
+<h2>
+	
+	<a href="http://www.subeer.org">
+	 	Subeer
+	</a>
+	
+	<a class="" href="{% url 'serial' %} ">
+		Serial
+	</a>
+
+	{% if serial_id %}
+	<a class="" href="{% url 'season' serial_id %}">
+		Season
+	</a>
+	{% endif %}
+	
+	{% if season_id %}
+	<a class="" href="{% url 'episode' season_id %}">
+		Episode
+	</a>
+	{% endif %}
+
+	<a class="" href="{% url 'form' %} ">
+		Share your opinion
+	</a>
+</h2>
